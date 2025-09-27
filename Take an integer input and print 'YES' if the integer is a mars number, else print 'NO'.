@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class MarsNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt(); // Input number
+        int steps = 0;
+        
+        while (num >= 10) { // Repeat until number reduces to a single digit
+            int sum = 0;
+            int temp = num;
+            while (temp > 0) { // Sum of digits
+                sum += temp % 10;
+                temp /= 10;
+            }
+            num = sum;
+            steps++;
+        }
+        
+        if (steps % 2 == 0) {
+            System.out.println("YES");
+        } else {
+            System.out.println("NO");
+        }
+    }
+}
+
