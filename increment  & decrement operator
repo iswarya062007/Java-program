@@ -1,0 +1,26 @@
+public class Main
+{
+    public static void main(String[] args) {
+        int a=10,b=4,c=12;
+        System.out.println(a++);
+        System.out.println(++a);
+        System.out.println(++a + a++);
+        a=b++ + c++ - a++;
+        b=--b - --a - ++c;
+        c=--c + --a - b--;
+        System.out.println(a+" "+b+" "+c);
+        b+=c;
+        a=b<<2;
+        System.out.println(a);
+        System.out.println(a>>3);
+        System.out.println(a<b&&c>a);
+        System.out.println(a%5==0?++a:c--);
+        int e=(a&b)^(c|a);
+        System.out.println(e);
+        int d=(a/b)*c;
+        System.out.println(d);
+        System.out.println(a&d&e);
+        System.out.println(b^c^d);
+        System.out.println(a+" "+b+" "+c+" "+d+" "+e);
+    }
+}
