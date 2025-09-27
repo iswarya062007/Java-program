@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class DiscountCalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double amount = sc.nextDouble(); // Input: total purchase amount
+        double finalAmount = amount;
+
+        // Apply discount rules
+        if (amount > 1000) {
+            finalAmount = amount * 0.8; // 20% discount
+        } else if (amount >= 500 && amount <= 1000) {
+            finalAmount = amount * 0.9; // 10% discount
+        } 
+        // else: amount < 500 → no discount
+
+        // Print final amount with 2 decimal places
+        System.out.printf("%.2f\n", finalAmount);
+    }
+}
